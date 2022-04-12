@@ -13,7 +13,7 @@ jobs:
       - name: Setup Python Version
         uses: actions/setup-python@v2
         with:
-          python-version: 3.8 # Install the python version needed
+          python-version: 3.9 # Install the python version needed
 
       - name: Install Python dependencies
         uses: py-actions/py-dependency-install@v2
