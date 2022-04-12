@@ -1,0 +1,26 @@
+name: Python Script Workflow
+
+on:
+  schedule:
+  - cron: "*/30 */12 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository content
+        uses: actions/checkout@v2 # Checkout the repository content to github runner.
+
+      - name: Setup Python Version
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8 # Install the python version needed
+
+      - name: Install Python dependencies
+        uses: py-actions/py-dependency-install@v2
+        with:
+          path: "requirements.txt"
+
+      - name: Execute Python script # Run the app.py
+        run: python sciensano.py
