@@ -1,6 +1,9 @@
-name: scrape-wikipedia
+name: Get latest Sciensano data
 
-on: [workflow_dispatch]
+on:
+  schedule:
+    # Runs every 6 hours
+    - cron: '0 */6 * * *'
 
 jobs:
   build-and-deploy:
