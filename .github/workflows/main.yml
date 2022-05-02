@@ -4,7 +4,7 @@ on:
   schedule:
     # Runs every 6 hours
     - cron: '*/30 * * * *'
-
+  workflow_dispatch
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
