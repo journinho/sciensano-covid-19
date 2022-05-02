@@ -1,10 +1,9 @@
 name: Get latest Sciensano data
 
-on:
+on: workflow_dispatch
   schedule:
     # Runs every 6 hours
     - cron: '*/30 * * * *'
-    - workflow_dispatch:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
